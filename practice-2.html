@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice-2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            height: 800px;
+            /* border: 2px solid; */
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            /* padding: 20px; */
+        }
+        .box-1{
+            grid-row: span 2;
+            grid-column: span 2;
+            background-color: #e61e65;
+
+        }
+        .box-2{
+            grid-column: span 2;
+            background-color: #fb9b11;
+        }
+        .box-3{
+            background-color: #a93bbb;
+        }
+        .box-4{
+            background-color: #576c7a;
+        }
+
+        @media screen and (max-width: 700px){
+            .container{
+                display: flex;
+                flex-direction: column;
+                gap:0;
+            }
+            .container>*{
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-1">1</div>
+        <div class="box-2">2</div>
+        <div class="box-3">3</div>
+        <div class="box-4">4</div>
+    </div>
+</body>
+</html>
