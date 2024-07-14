@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice-1</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .mobile{
+            display: none;
+        }
+        .container{
+            border: 5px solid ;
+            border-radius: 16px;
+            height: 85vh;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .left{
+            font-size: 48px;
+            font-weight: 400;
+            height: 100%;
+            background-color: lightgray;
+            border-radius: 16px;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .right{
+            font-size: 48px;
+            font-weight: 400;
+            background-color: #f4f4db;
+            border-radius: 16px;
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 700px){
+            .desktop{
+                display: none;
+            }
+            .mobile{
+                display: block;
+            }
+            .container{
+                flex-direction: column;
+            }
+            .left{
+                height: 30%;
+                width: 100%;
+            }
+            .right{
+                height: 70%;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="desktop">Desktop</h1>
+    <h1 class="mobile">Mobile</h1>
+    <div class="container">
+        <div class="left">Left</div>
+        <div class="right">Right</div>
+    </div>
+</body>
+</html>
